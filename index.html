@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS: SASS e BEM</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body> <!-- Usando BEM -->
+    <header id="header">
+        <h1 id="header__title">Esse é o título</h1>
+        <h2 id="header__subtitle">Esse é o subtítulo</h2>
+    </header>
+
+    <main id="main">
+        <section id="main__first">
+            <p>Primeira seção</p>
+            <a href="#second">Próxima seção</a>
+        </section>
+
+        <section id="main__second--hidden">
+            <p>Segunda seção</p>
+            <a href="#first">Voltar</a>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <header id="footer__header">  
+            <h1 class="footer__title">BEM (Block, element and modifier)</h1>
+        </header>
+        <section id="footer__block">
+            <h2 class="footer__subtitle">Block</h2>
+            <p class="footer__text">Em BEM, um Bloco é uma entidade independente, um “bloco de construção” de uma aplicação; uma abstração mais geral, com seu próprio significado.</p>
+        </section>
+
+        <section id="footer__element">
+            <h2 class="footer__subtitle">Element</h2>
+            <p class="footer__text">Um Elemento faz parte de um Bloco; Se escreve <strong>Nome do Bloco + 2 underlines + nome do Elemento</strong></p>
+        </section>
+
+        <section id="footer__modifier">
+            <h2 class="footer__subtitle">Modifier</h2>
+            <p class="footer__text">Modifica um bloco ou elemento; <strong>nome de um Bloco ou Modificador + 2 hífens + o nome do Modificador</strong></p>
+        </section>
+    </footer>
+    
+    
+</body> <!-- SASS -->
+</html>

@@ -1,0 +1,49 @@
+/* Variables */
+$main-color: #3C3C3C;
+$main-font: "Fira code", Helvetica;
+$font-color: white;
+
+body {
+    text-align: center;
+    background-color: $main-color;
+    color: $font-color;
+    font-family: $main-font;
+}
+
+/* BEM */
+#main__second--hidden {
+    visibility: hidden;
+}
+
+/* Nesting */
+#header {
+    #header__title {
+        color: lightcoral;
+    }
+    #header__subtitle {
+        color: lightblue;
+    }
+}
+
+/* Mixins */
+@mixin theme($theme: DarkGray) {
+    background: $theme;
+    box-shadow: 0 0 1px rgba($theme, .25);
+    color: white;
+}
+
+#footer {
+    #footer__header {
+        @include theme;
+    }
+    #footer__block {
+        @include theme($theme: DarkRed);
+    }
+    #footer__element {
+        @include theme($theme: DarkGreen);
+    }
+    #footer__modifier {
+        @include theme($theme: DarkBlue);
+    }
+}
+
